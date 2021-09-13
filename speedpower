@@ -1,0 +1,11 @@
+from scipy.interpolate import interp1d
+import numpy as np
+
+x=[1,2,3,4,5]
+y=[0.22,0.51,1,5,7]
+STdata=np.genfromtxt('Data_ST.txt')
+V=STdata[:,0]
+P=STdata[:,1]
+f=interp1d(P,V,kind='cubic')
+
+P_tar=14417
